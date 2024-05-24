@@ -1,11 +1,18 @@
-<div class="cover-container">
-<%= image_tag"cover.png" %>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://image.cnbcfm.com/api/v1/image/104768589-movies-anywhere.JPG?v=1507816437&w=1920&h=1080)">
+  <h1>MY FAVORITE MOVIES</h1>
 </div>
-<ul>
-<% @lists.each do |list| %>
-  <li><%= list.name %></li>
+<div class="container-sm">
+  <% @lists.each do |list| %>
+    <div class="card-product">
+      <img src="https://mediakwest.com/wp-content/uploads/2019/07/1_Beaugrenelle.ONYX-c-Fr%C3%A9d%C3%A9ric-Berthet.HD_.006.jpg" />
+      <div class="card-product-infos">
+          <%= link_to list.name, list %>
+      </div>
+    </div>
   <% end %>
-<ul>
+</div>
 
 
-<%= link_to "New list", new_list_path  %>
+
+
+<%= link_to "New list", new_list_path, class: "btn btn-ghost" %>
