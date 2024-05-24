@@ -1,0 +1,11 @@
+<div class="cover-container">
+<%= image_tag"cover.png" %>
+</div>
+<ul>
+<% @lists.each do |list| %>
+  <li><%= list.name %></li>
+  <% end %>
+<ul>
+
+
+<%= link_to "New list", new_list_path  %>

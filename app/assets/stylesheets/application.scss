@@ -10,3 +10,9 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.cover-container {
+  width: 100%;
+  background-size: contain;
+  opacity: 0.2;
+}
